@@ -14,3 +14,60 @@
 # Ignore all logfiles and tempfiles.
 /log/*.log
 /tmp
+
+
+# Refinery Specific
+*.tmproj
+*.autobackupbyrefinery.*
+refinerycms-*.gem
+.autotest
+
+# Mac
+.DS_Store
+
+# Windows
+Thumbs.db
+
+# NetBeans
+nbproject
+
+# Eclipse
+.project
+
+# Redcar
+.redcar
+
+# Rubinius
+*.rbc
+
+# Vim
+*.swp
+*.swo
+
+# RubyMine
+.idea
+
+
+# E-texteditor
+.eprj
+
+# Backup
+*~
+
+# Capybara Bug
+capybara-*html
+
+# sass
+.sass-cache
+.sass-cache/*
+
+# Sphinx
+config/*.sphinx.conf
+/db/sphinx/
+/log/searchd.*.pid
+
+#rvm
+.rvmrc
+.rvmrc.*
+.ruby-version
+.ruby-gemset

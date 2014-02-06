@@ -1,0 +1,8 @@
+.ng-cloak(ng-init="init()")
+  .page-header
+    h3
+      'Редактировать задачу
+  .form-actions
+    = link_to 'вернуться к списку задач',root_path, class: 'btn'
+  .task.m-new
+    = render 'templates/form'

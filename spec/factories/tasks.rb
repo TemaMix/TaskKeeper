@@ -2,7 +2,6 @@
 
 FactoryGirl.define do
   factory :task do
-    id 1
     title "MyString"
     text "MyText"
     complete false

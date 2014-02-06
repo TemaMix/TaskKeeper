@@ -1,0 +1,34 @@
+.ng-cloak(ng-init="init()")
+  .page-header
+    h3
+      'Список задач
+  .tasks-list
+    .form-actions
+      form.task__form.form-horizontal(ng-submit='createTask(task)')
+        .control-group
+          .control-label
+            label Заголовок
+          .controls
+            input(placeholder="введите заголовок задачи" autofocus="autofocus"  maxlength="255" type="text"  ng-model="task.title" data-non-blank="" required="" )
+        .control-group
+          .control-label
+            label Описание
+          .controls
+            textarea(placeholder="укажите описание задачи" type="text" ng-model="task.text" data-non-blank="")
+        .control-group
+          .controls
+            button.btn.btn-success(type="submit") Создать
+    h4(ng-show="tasks == 0")Список задач пуст.
+
+    ul
+      li.tasks-list__item(ng-repeat="task in tasks| filter:{complete:false}")
+        .tasks-list__item__complete
+          input(type="checkbox" id="check{{task.id}}"  ng-model="task.complete" ng-change="toggleTask(task)")
+          label(for="check{{task.id}}")
+        .tasks-list__item__title
+          '{{task.title}}
+        a.tasks-list__item__edit(href="/tasks/{{task.id}}")Редактировать
+        a.tasks-list__item__delete(ng-click="deleteTask(task)")Удалить
+
+
+

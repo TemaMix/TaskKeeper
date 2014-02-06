@@ -12,5 +12,11 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require twitter/bootstrap
+//= require angular
+//= require angularjs/rails/resource
+//= require angular-route
 //= require turbolinks
+//= require task_keeper
+//= require_tree ./task_keeper
 //= require_tree .

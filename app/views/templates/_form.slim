@@ -1,0 +1,14 @@
+form.task__form.form-horizontal(ng-submit='updateTask()')
+  .control-group
+    .control-label
+      label Заголовок
+    .controls
+      input(placeholder="введите заголовок задачи" autofocus="autofocus"  maxlength="255" type="text"  ng-model="task.title" data-non-blank="" required="" )
+  .control-group
+    .control-label
+      label Описание
+    .controls
+      textarea(placeholder="укажите описание задачи" type="text" ng-model="task.text" )
+  .control-group
+    .controls
+      button.btn.btn-success(type="submit") Сохранить
